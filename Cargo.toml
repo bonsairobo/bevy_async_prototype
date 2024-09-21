@@ -1,0 +1,12 @@
+[package]
+name = "bevy_send_system"
+description = "Compose async tasks with the Bevy ECS."
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.89"
+async-channel = "2.3.1"
+# NOTE: only using multi_threaded because otherwise you get `FakeTask`s
+bevy = { version = "0.14.2", default-features = false, features = ["multi_threaded"] }
+futures-util = "0.3.30"
